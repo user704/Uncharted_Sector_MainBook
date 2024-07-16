@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff85362b-0365-4aa7-b9b3-99e2724b8ad8" name="Changes" comment="Create Project">
+      <change afterPath="$PROJECT_DIR$/Resources/Введение/Введение.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Классы.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Предметы.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Расы.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/Введение.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/Классы.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/Предметы.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book/Расы.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,21 +31,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "user704"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;user704&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/user704/Uncharted_Sector_MainBook.git",
-    "accountId": "1a285060-a3ea-40c2-8cc3-06b25e25972d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/user704/Uncharted_Sector_MainBook.git&quot;,
+    &quot;accountId&quot;: &quot;1a285060-a3ea-40c2-8cc3-06b25e25972d&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2jGbAUrBM4absJfjarDe6WY0aXh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -48,11 +56,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Админ\PycharmProjects\Uncharted Sector MainBook\Resources\Введение" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -93,10 +107,19 @@
       <option name="project" value="LOCAL" />
       <updated>1721032908051</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create Project">
+      <option name="closed" value="true" />
+      <created>1721034187380</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721034187380</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Create Project" />
     <option name="LAST_COMMIT_MESSAGE" value="Create Project" />
   </component>
