@@ -10,6 +10,7 @@ def main(page: ft.Page):
     page.window.height = get_monitors()[0].height / 1.35
     page.window.alignment = ft.Alignment(0, 0)
     page.horizontal_alignment = ft.MainAxisAlignment.CENTER
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.scroll = True
 
     border = ft.Border(top=ft.BorderSide(width=1, color='#171a1a'),
