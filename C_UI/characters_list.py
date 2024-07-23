@@ -13,12 +13,8 @@ class MainMenu:
     def exit_app(self, e):
         self.page.window.close()
 
-    def to_settings(self, e):
-        from C_UI.settings import Settings
-        Settings(self.page)
-
     def create_widgets(self):
-        self.page.title = "Uncharted Sector: Main Menu"
+        self.page.title = "Uncharted Sector Main Menu"
         b_style = ft.BorderSide(width=1, color='#171a1a')
         border = ft.Border(top=b_style, bottom=b_style, left=b_style, right=b_style)
 
@@ -44,11 +40,10 @@ class MainMenu:
         menu_btns = ft.Column([
             ft.ElevatedButton(text="Лист персонажа", scale=1.2, width=170, color='#85c7c7'),
             ft.ElevatedButton(text="Главная книга", scale=1.2, width=170, color='#85c7c7'),
-            ft.ElevatedButton(text="Настройки", scale=1.2, width=170, color='#85c7c7', on_click=self.to_settings),
+            ft.ElevatedButton(text="Настройки", scale=1.2, width=170, color='#85c7c7'),
             ft.ElevatedButton(text="Выйти", scale=1.2, width=170, color='#85c7c7', on_click=self.exit_app)
         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            alignment=ft.MainAxisAlignment.SPACE_AROUND,
-        height=230)
+            alignment=ft.MainAxisAlignment.SPACE_BETWEEN)
 
         #---Разметка---
         layout = ft.Column([title_t, menu_btns],

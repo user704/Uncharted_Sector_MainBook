@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff85362b-0365-4aa7-b9b3-99e2724b8ad8" name="Changes" comment="Create Project">
-      <change afterPath="$PROJECT_DIR$/C_UI/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/C_UI/main_menu.py" afterDir="false" />
+    <list default="true" id="ff85362b-0365-4aa7-b9b3-99e2724b8ad8" name="Changes" comment="Create OOP Workflow">
+      <change afterPath="$PROJECT_DIR$/C_UI/character_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C_UI/characters_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C_UI/main_book.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C_UI/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_UI/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_UI/main_menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +61,8 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Админ/PycharmProjects/Uncharted Sector MainBook/C_UI&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -67,6 +71,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Админ\PycharmProjects\Uncharted Sector MainBook\C_UI" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Админ\PycharmProjects\Uncharted Sector MainBook\Resources\Введение" />
     </key>
@@ -180,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721288836344</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Create OOP Workflow">
+      <option name="closed" value="true" />
+      <created>1721623658550</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1721623658550</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +212,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Create Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Project" />
+    <MESSAGE value="Create OOP Workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create OOP Workflow" />
   </component>
 </project>
