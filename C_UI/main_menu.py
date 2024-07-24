@@ -19,18 +19,16 @@ class MainMenu:
 
     def create_widgets(self):
         self.page.title = "Uncharted Sector: Main Menu"
-        b_style = ft.BorderSide(width=1, color='#171a1a')
+        b_style = ft.BorderSide(width=1, color='cyan')
         border = ft.Border(top=b_style, bottom=b_style, left=b_style, right=b_style)
 
         #---Заголовок---
         title_t = ft.Column([
             ft.Text(value="Uncharted Sector",
-                    color='#a5d1d1',
                     size=30,
                     weight=ft.FontWeight('bold')),
 
             ft.Text(value="Приложение для удобной и комфортной игры",
-                    color='#a5d1d1',
                     size=10,
                     italic=True),
 
@@ -42,10 +40,10 @@ class MainMenu:
 
         #---Кнопки меню---
         menu_btns = ft.Column([
-            ft.ElevatedButton(text="Лист персонажа", scale=1.2, width=170, color='#85c7c7'),
-            ft.ElevatedButton(text="Главная книга", scale=1.2, width=170, color='#85c7c7'),
-            ft.ElevatedButton(text="Настройки", scale=1.2, width=170, color='#85c7c7', on_click=self.to_settings),
-            ft.ElevatedButton(text="Выйти", scale=1.2, width=170, color='#85c7c7', on_click=self.exit_app)
+            ft.OutlinedButton(text="Лист персонажа", scale=1.2, width=170),
+            ft.OutlinedButton(text="Главная книга", scale=1.2, width=170),
+            ft.OutlinedButton(text="Настройки", scale=1.2, width=170, on_click=self.to_settings),
+            ft.OutlinedButton(text="Выйти", scale=1.2, width=170, on_click=self.exit_app)
         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             alignment=ft.MainAxisAlignment.SPACE_AROUND,
         height=230)
@@ -59,7 +57,6 @@ class MainMenu:
         menu_ctr.padding = 10
         menu_ctr.margin = 0
         menu_ctr.border = border
-        menu_ctr.bgcolor = '#426b6b'
         menu_ctr.border_radius = 10
         menu_ctr.height = 350
         menu_ctr.width = 300
