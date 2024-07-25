@@ -1,11 +1,13 @@
 import flet as ft
 import time
+import C_UI.MiniFunc.CoreFunctions as Core
 
 
 class MainMenu:
     #---Выполняется при создании класса---
     def __init__(self, page: ft.Page, is_anim_from_start=True):
         self.page = page
+        self.animations = Core.read_settings('animations')
         self.page.title = "Uncharted Sector: Main Menu"
         self.del_before()
         self.anim_start(is_anim_from_start)
@@ -115,11 +117,20 @@ class MainMenu:
             btns.opacity = 0
             container.content = btns
             self.page.update()
-            time.sleep(0.2)
+            time.sleep(0.1)
             btns.opacity = 1
             self.page.update()
 
-        if from_start:
-            anim_from_start()
+        if self.animations:
+            if from_start:
+                anim_from_start()
+            else:
+                anim_not_from_start()
         else:
-            anim_not_from_start()
+            container = create_container()
+            container.height = 350
+            container.width = 300
+            container.border_radius = 10
+            btns = self.create_btns()
+            container.content = btns
+            self.page.add(container)

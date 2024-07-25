@@ -1,91 +1,122 @@
 import flet as ft
 import time
-
+import C_UI.MiniFunc.CoreFunctions as Core
 
 class Settings:
 
     # ---Инициализация класса---
     def __init__(self, page: ft.Page):
+        self.container = None
+        self.btns = None
         self.page = page
+        self.animations = Core.read_settings('animations')
         self.page.title = "Uncharted Sector: Settings"
         self.del_before()
-        self.anim_start()
+        self.animate_spawn()
 
     #---Удаление предыдущего окна---
     def del_before(self):
         self.page.clean()
 
-    #---Сохранение настройки в файл---
-    @staticmethod
-    def save_to_file(key, value):
-        #Поиск абсолютного пути
-        from os import path
-        file_path = path.abspath(path.dirname(__file__))
-        file_path = path.join(file_path, '..', "Data", "settings.json")
-        #Перезаписываем файл настроек
-        import json
-        with open(file_path, 'w', encoding='UTF-8') as file:
-            json.dump({key: value}, file)
-
     #---Переключение темы---
     def change_theme(self, e):
-        if self.page.theme_mode == 'light':
-            self.page.theme_mode = 'dark'
+        if self.page.theme_mode == 'dark':
+            Core.write_settings('theme_mode', 'light')
         else:
-            self.page.theme_mode = 'light'
+            Core.write_settings('theme_mode', 'dark')
+        self.page.theme_mode = Core.read_settings('theme_mode')
+
         self.page.update()
-        self.save_to_file('theme_mode', value=self.page.theme_mode)
+
+    #---Переключение анимаций---
+    def change_animations(self, e):
+        if Core.read_settings('animations'):
+            Core.write_settings('animations', False)
+        else:
+            Core.write_settings('animations', True)
+        self.animations = Core.read_settings('animations')
 
     #---Настройки --> Главное меню---
     def back_to_menu(self, e):
+        self.animate_spawn(True)
         from C_UI.main_menu import MainMenu
-        MainMenu(self.page)
+        MainMenu(self.page, False)
 
     # ---Спавн меню настроек с анимацией---
-    def anim_start(self):
+    def animate_spawn(self, end=False):
         # ---Создание контейнера для дальнейших анимаций---
         def create_container():
             b_style = ft.BorderSide(width=1, color='cyan')
             border = ft.Border(top=b_style, bottom=b_style, left=b_style, right=b_style)
 
             return ft.Container(padding=10, margin=0, border=border)
+        if not self.animations:
+            self.container = create_container()
+            self.container.animate = ft.animation.Animation(300, curve=ft.AnimationCurve.EASE)
+            self.container.border_radius = 10
+            self.container.width = 1000
+            self.container.height = 600
+            self.btns = self.create_widgets()
+            self.btns.animate_opacity = ft.animation.Animation(500, curve=ft.AnimationCurve.EASE)
+            self.container.content = self.btns
+            self.page.add(self.container)
+            return
 
-        # ---Начальные параметры контейнера---
-        container = create_container()
-        container.border_radius = 10
-        container.height = 350
-        container.width = 300
-        container.animate = ft.animation.Animation(300, curve=ft.AnimationCurve.EASE)
-        self.page.add(container)
+        if not end:
+            # ---Начальные параметры контейнера---
+            self.container = create_container()
+            self.container.border_radius = 10
+            self.container.height = 350
+            self.container.width = 300
+            self.container.animate = ft.animation.Animation(300, curve=ft.AnimationCurve.EASE)
+            self.page.add(self.container)
 
-        # ---Анимация ширины---
-        time.sleep(0.5)
-        container.width = 300
-        self.page.update()
+            # ---Анимация ширины---
+            time.sleep(0.1)
+            self.container.width = 1000
+            self.page.update()
 
-        # ---Анимация высоты---
-        time.sleep(0.3)
-        container.height = 350
-        self.page.update()
+            # ---Анимация высоты---
+            time.sleep(0.3)
+            self.container.height = 600
+            self.page.update()
 
-        # ---Анимация появления кнопок---
-        btns = self.create_widgets()
-        btns.animate_opacity = ft.animation.Animation(500, curve=ft.AnimationCurve.EASE)
-        btns.opacity = 0
-        container.content = btns
-        self.page.update()
-        time.sleep(0.2)
-        btns.opacity = 1
-        self.page.update()
+            # ---Анимация появления кнопок---
+            self.btns = self.create_widgets()
+            self.btns.animate_opacity = ft.animation.Animation(500, curve=ft.AnimationCurve.EASE)
+            self.btns.opacity = 0
+            self.container.content = self.btns
+            self.page.update()
+            time.sleep(0.2)
+            self.btns.opacity = 1
+            self.page.update()
+        else:
+            # ---Анимация исчезания кнопок---
+            time.sleep(0.2)
+            self.btns.opacity = 0
+            # self.container.content = None
+            self.page.update()
+
+            # ---Анимация ширины---
+            time.sleep(0.1)
+            self.container.width = 300
+            self.page.update()
+
+            # ---Анимация высоты---
+            time.sleep(0.3)
+            self.container.height = 350
+            self.page.update()
+            time.sleep(0.2)
 
     # ---Создание виджетов---
     def create_widgets(self):
 
         #---Заголовок раздела настроек---
         def section_title(title=''):
-            row = ft.Row([ft.Text(title, size=20, weight=ft.FontWeight('bold'))], alignment=ft.MainAxisAlignment.CENTER)
+            text = ft.Text(title, size=20, weight=ft.FontWeight('bold'))
 
-            return [ft.Divider(thickness=2), row, ft.Divider(thickness=2)]
+            return [ft.Column([ft.Divider(thickness=2), text, ft.Divider(thickness=2)],
+                              horizontal_alignment=ft.CrossAxisAlignment.CENTER, width=100)]
 
         #---Пункт настроек - тумблер---
         def settings_switch(name='', current_value=False, event=None):
@@ -98,9 +129,12 @@ class Settings:
         #---Список настроек---
         settings_list = ft.ListView(
             section_title('Визуальные настройки') +
-            settings_switch(name="Тёмная / Светлая тема",
-                            current_value=self.page.theme_mode == 'light',
-                            event=self.change_theme)
+            settings_switch(name="Переключить тему",
+                            current_value=Core.read_settings('theme_mode') == 'light',
+                            event=self.change_theme) +
+            settings_switch(name="Анимации",
+                            current_value=Core.read_settings('animations'),
+                            event=self.change_animations)
             , height=520, padding=0
         )
 
