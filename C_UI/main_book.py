@@ -47,6 +47,12 @@ class Main_Book:
         from C_UI.main_menu import MainMenu
         MainMenu(self.page, False)
 
+    #---Главная книга --> Главное меню---
+    def back_to_settings(self, e):
+        self.animate_spawn(True)
+        from C_UI.settings import Settings
+        Settings(self.page)
+
     # ---Спавн меню настроек с анимацией---
     def animate_spawn(self, end=False):
         # ---Создание контейнера для дальнейших анимаций---
@@ -249,4 +255,4 @@ class Main_Book:
     # ---Создание виджетов---
     def create_row(self):
         return ft.Row([ft.OutlinedButton("В главное меню", scale=1.2, on_click=self.back_to_menu),
-                       ft.OutlinedButton("Настройки", scale=1.2)], alignment=ft.MainAxisAlignment.SPACE_AROUND)
+                       ft.OutlinedButton("Настройки", on_click=self.back_to_settings, scale=1.2)], alignment=ft.MainAxisAlignment.SPACE_AROUND)

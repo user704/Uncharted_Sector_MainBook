@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff85362b-0365-4aa7-b9b3-99e2724b8ad8" name="Changes" comment="Опция отключения анимаций">
-      <change beforePath="$PROJECT_DIR$/.idea/Uncharted Sector MainBook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Uncharted Sector MainBook.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ff85362b-0365-4aa7-b9b3-99e2724b8ad8" name="Changes" comment="Пока что всё работает">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/C_UI/main_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_UI/main_book.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/C_UI/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_UI/main_menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/C_UI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_UI/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721896033140</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Пока что всё работает">
+      <option name="closed" value="true" />
+      <created>1721899358351</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721899358351</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,6 +263,7 @@
     <MESSAGE value="Сохранение настроек в файл" />
     <MESSAGE value="Работа над анимированными переходами" />
     <MESSAGE value="Опция отключения анимаций" />
-    <option name="LAST_COMMIT_MESSAGE" value="Опция отключения анимаций" />
+    <MESSAGE value="Пока что всё работает" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пока что всё работает" />
   </component>
 </project>

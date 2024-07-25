@@ -50,7 +50,7 @@ class MainMenu:
 
         #---Кнопки меню---
         menu_btns = ft.Column([
-            ft.OutlinedButton(text="Лист персонажа", scale=1.2, width=170),
+            ft.OutlinedButton(text="Лист персонажа", scale=1.2, width=170, disabled=True),
             ft.OutlinedButton(text="Главная книга", scale=1.2, width=170, on_click=self.to_main_book),
             ft.OutlinedButton(text="Настройки", scale=1.2, width=170, on_click=self.to_settings),
             ft.OutlinedButton(text="Выйти", scale=1.2, width=170, on_click=self.exit_app)

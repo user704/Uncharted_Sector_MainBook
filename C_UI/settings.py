@@ -43,6 +43,12 @@ class Settings:
         from C_UI.main_menu import MainMenu
         MainMenu(self.page, False)
 
+    # ---Настройки --> Главное меню---
+    def back_to_main_book(self, e):
+        self.animate_spawn(True)
+        from C_UI.main_book import Main_Book
+        Main_Book(self.page)
+
     # ---Спавн меню настроек с анимацией---
     def animate_spawn(self, end=False):
         # ---Создание контейнера для дальнейших анимаций---
@@ -144,7 +150,11 @@ class Settings:
             ft.OutlinedButton(text="В главное меню",
                               scale=1.2,
                               width=170,
-                              on_click=self.back_to_menu)
+                              on_click=self.back_to_menu),
+            ft.OutlinedButton(text="В главную книгу",
+                              scale=1.2,
+                              width=170,
+                              on_click=self.back_to_main_book),
         ], alignment=ft.MainAxisAlignment.SPACE_AROUND)
 
         return ft.Column(controls=[settings_list, bottom_row], horizontal_alignment=ft.CrossAxisAlignment.CENTER)
