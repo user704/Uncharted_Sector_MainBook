@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff85362b-0365-4aa7-b9b3-99e2724b8ad8" name="Changes" comment="Опция отключения анимаций">
+      <change beforePath="$PROJECT_DIR$/.idea/Uncharted Sector MainBook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Uncharted Sector MainBook.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_UI/character_editor.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_UI/character_editor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/C_UI/main_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_UI/main_book.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/C_UI/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_UI/main_menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C_UI/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/C_UI/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +58,11 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Python.character_editor.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_book.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Админ/PycharmProjects/Uncharted Sector MainBook/C_UI&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Админ/PycharmProjects/Uncharted_Sector_MainBook&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -226,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721880297843</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Опция отключения анимаций">
+      <option name="closed" value="true" />
+      <created>1721896033140</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721896033140</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

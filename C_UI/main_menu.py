@@ -25,7 +25,7 @@ class MainMenu:
         from C_UI.settings import Settings
         Settings(self.page)
 
-    # ---Главное меню --> Настройки---
+    # ---Главное меню --> Главная книга---
     def to_main_book(self, e):
         from C_UI.main_book import Main_Book
         Main_Book(self.page)

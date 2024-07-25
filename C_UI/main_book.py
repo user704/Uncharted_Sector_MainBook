@@ -7,13 +7,13 @@ class Main_Book:
 
     # ---Инициализация класса---
     def __init__(self, page: ft.Page):
+        self.page = page
         self.container = None
         self.left_container = None
         self.down_container = None
         self.btns1 = None
         self.btns2 = None
         self.btns3 = None
-        self.page = page
         self.animations = Core.read_settings('animations')
         self.page.title = "Uncharted Sector: MainBook"
         self.del_before()
@@ -90,7 +90,8 @@ class Main_Book:
             self.btns3 = self.create_row()
             self.down_container.content = self.btns3
 
-            self.page.add(ft.Row([self.left_container,self.container],alignment=ft.MainAxisAlignment.CENTER),self.down_container)
+            self.page.add(ft.Row([self.left_container, self.container], alignment=ft.MainAxisAlignment.CENTER),
+                          self.down_container)
             return
 
         if not end:
@@ -204,7 +205,37 @@ class Main_Book:
             time.sleep(0.2)
             self.down_container.width = 10
             self.page.update()
-            time.sleep(100)
+
+            time.sleep(0.2)
+            self.page.controls.pop(1)
+            self.btns2.opacity = 0
+            self.left_container.border_radius = 10
+            self.page.update()
+
+            time.sleep(0.2)
+            self.left_container.width = 10
+            self.page.update()
+
+            time.sleep(0.2)
+            self.left_container.height = 10
+            self.page.update()
+
+            time.sleep(0.1)
+            self.btns1.opacity = 0
+            self.page.clean()
+            self.page.add(self.container)
+            self.container.border_radius = 10
+            self.page.update()
+
+            time.sleep(0.1)
+            self.container.width = 300
+            self.page.update()
+
+            time.sleep(0.2)
+            self.container.height = 350
+            self.page.update()
+            return
+
     # ---Создание виджетов---
     def create_book(self):
         a = ft.Text("Test", size=20)
