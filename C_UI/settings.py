@@ -35,6 +35,7 @@ class Settings:
         else:
             Core.write_settings('animations', True)
         self.animations = Core.read_settings('animations')
+        self.page.update()
 
     #---Настройки --> Главное меню---
     def back_to_menu(self, e):

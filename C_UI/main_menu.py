@@ -25,6 +25,11 @@ class MainMenu:
         from C_UI.settings import Settings
         Settings(self.page)
 
+    # ---Главное меню --> Настройки---
+    def to_main_book(self, e):
+        from C_UI.main_book import Main_Book
+        Main_Book(self.page)
+
     #---Создание кнопок и основного функционала---
     def create_btns(self):
         #---Заголовок---
@@ -46,7 +51,7 @@ class MainMenu:
         #---Кнопки меню---
         menu_btns = ft.Column([
             ft.OutlinedButton(text="Лист персонажа", scale=1.2, width=170),
-            ft.OutlinedButton(text="Главная книга", scale=1.2, width=170),
+            ft.OutlinedButton(text="Главная книга", scale=1.2, width=170, on_click=self.to_main_book),
             ft.OutlinedButton(text="Настройки", scale=1.2, width=170, on_click=self.to_settings),
             ft.OutlinedButton(text="Выйти", scale=1.2, width=170, on_click=self.exit_app)
         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER,
