@@ -151,9 +151,9 @@ class Settings:
                               scale=1.2,
                               width=170,
                               on_click=self.back_to_menu),
-            ft.OutlinedButton(text="В главную книгу",
+            ft.OutlinedButton(text="Правила и сеттинг",
                               scale=1.2,
-                              width=170,
+                              width=180,
                               on_click=self.back_to_main_book),
         ], alignment=ft.MainAxisAlignment.SPACE_AROUND)
 
